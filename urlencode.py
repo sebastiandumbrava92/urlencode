@@ -20,8 +20,11 @@ def main():
     else:
         argv = sys.argv
         num_args = len(argv) - 1
-        unencoded = argv[1]
-
+        if num_args == 0:
+            unencoded = ""
+        else:
+            unencoded = argv[1]
+            
     if num_args != 1:
         # usage
         print("Error: incorrect parameter")
