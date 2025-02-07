@@ -14,6 +14,7 @@ def main():
         argv = piped.split()
         num_args = len(argv)
         if num_args == 0:
+            num_args = 1
             unencoded = ""
         if num_args != 0:
             unencoded = argv[0]
