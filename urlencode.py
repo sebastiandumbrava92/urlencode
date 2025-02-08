@@ -14,6 +14,7 @@ def main():
         argv = piped.split()
         num_args = len(argv)
         if num_args == 0:
+            # empty string
             num_args = 1
         elif num_args != 0:
             unencoded = argv[0]
@@ -25,14 +26,12 @@ def main():
             
     if num_args != 1:
         # usage
-        print("Error: incorrect parameter")
+        print("Error: incorrect input")
         print("Usage: urlencode \"string_to_encode\"")
     else:
         encoded = quote(unencoded)
         print(encoded)
 
     return
-
-
 
 main()
